@@ -11,9 +11,7 @@ body{
     margin: auto;
 }
 
-.flex{
-    display: flex;
-}
+
 nav { 
     display: flex;
     justify-content: space-between;
@@ -28,9 +26,12 @@ nav {
 #logo{
     height: 100px;
 }
-
 .galerie{
-    height: 200px;
+    align-items: center;
+}
+.galerie div img{
+    width: 200px;
+	height: 200px;
     margin: 10px ;
 }
 .prems{
@@ -38,7 +39,7 @@ nav {
     padding-bottom:  50px;
     padding-left:  150px;
     padding-right:  150px;
-    background-color: black; 
+    background-image: url(./images/baniere.jpg)  ; 
     color: white;
 }
 

@@ -1,21 +1,69 @@
 
-
-
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
 
 #wrapper{
-    max-width: 1280px;
+    max-width: 1024px;
     margin: auto;
 }
 
- img{
+.flex{
+    display: flex;
+}
+nav { 
+    display: flex;
+    justify-content: space-between;
+}
+.menue{
+    padding-top: 3%;
+   
+}
+.menue a{
+    padding-right: 30px;
+}
+#logo{
     height: 100px;
 }
-#bouton{
 
+.galerie{
+    height: 200px;
+    margin: 10px ;
 }
-.gras{
+.prems{
+    padding-top:  50px;
+    padding-bottom:  50px;
+    padding-left:  150px;
+    padding-right:  150px;
+    background-color: black; 
+    color: white;
+}
+
+h1{
+  text-align: center;
+    }
+.center{
+    display: block;
+    text-align: center;
+}
+#firstSec{
+    display: flex;
+    justify-content: space-between;
+}
+.bouton{
+        padding : 3px;
+        color: white;
+        text-decoration: none;
+        border: 1px white solid;
+        
+}
+/* .gras{
 
 }
 .caraPetit{
-    test
-}
+    
+
+} */

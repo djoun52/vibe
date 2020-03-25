@@ -7,6 +7,7 @@ body{
     min-height: 100%;
     font-family: 'roboto', sans-serif ;
     font-size: 16px;
+    background-color: rgb(160, 160, 160);
 }
 
 #wrapper{
@@ -33,34 +34,14 @@ nav {
 #logo{
     height: 100px;
 }
-.galerie{
-    align-items: center;
-}
-.galerie div img{
-    width: 230px;
-	height: 230px;
-    margin: 10px ;
-}
-#navgal{
-    display: flex;
-    justify-content: space-evenly;
-}
-#btlm{
-    background-color: red;
-    color: black;
-    border: 1px rgb(255, 0, 0) solid;
-    border-radius: 5px;
-    padding : 0.5em;
-}
-#liengal a{
-    padding : 0.5em;
-}
+
 .prems{
     padding-top:  50px;
     padding-bottom:  50px;
     padding-left:  150px;
     padding-right:  150px;
     background-image: url(./images/baniere.jpg)  ; 
+    opacity: 0.5;
     background-size: 1024px 300px;
     color: white;
 }
@@ -109,20 +90,58 @@ li{
 .margeliste{
     margin-left: 1em;
 }
-.testi{
+
+
+.galerie{
+    align-items: center;
+}
+.galerie div {
+    max-height: 100%;
+}
+.galerie div img{
+  
+    width: 230px;
+	height: 230px;
+    margin: 10px ;
+    transition: height 1s;
+}
+/* .galerie div img:hover{
+    width: 260px;
+	height: 260px;
+} */
+#navgal{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 2em;
+}
+.btlm{
+    background-color: red;
+    color: black;
+    border: 1px rgb(255, 0, 0) solid;
+    border-radius: 5px;
+    padding : 0.5em;
+}
+#liengal a{
+    padding : 0.5em;
+}
+.testistart{
+    display: flex;
+    justify-content: flex-start;
+}
+.testiend{
+    display: flex;
+    justify-content: flex-end;
 }
 #testimonials{
-    padding: 4em;
+    padding: 3em;
 }
-.testi div{
-   padding-top: 1em;
+.testistart div, .testiend div{
+   padding-top: 2em;
 }
 .imgtest{
     margin: 1em;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     border: 1px none solid;
     border-radius: 100%;
 }
@@ -130,15 +149,81 @@ li{
     font-size: 14px;
 }
 #rip{
-    margin: 0%;
-    padding-top: 0.5em;
-    font-size: 30px;
+    margin-top: 0.5em;
+    margin-block-end: 0em;
+   font-size: 30px;
+}
+
+#hell{
+    padding-top:  100px;
+    padding-bottom:  70px;
+    padding-left:  150px;
+    padding-right:  150px;
+    background-image: url(./images/doom_banniere.jpg); 
+    opacity: 0.5;
+    background-size: 1024px 300px;
+    color: black;
+}
+#hell h2,#hell p{
+    opacity: unset;
+    font-weight: bolder;
+}
+#contact{
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contact .colonne{
+    display: block;
+    width: 40%;
+}
+#contact input , textarea{
+    padding-left: 1em;
+    width: 100%;
+    height: 3em;
+    margin: 2% 0;
+    border: none;
+    background-color: rgb(255, 255, 243);
+}
+textarea{
+    padding-left: 1em;
+    width: 100%;
+    height: 128px;
+    margin: 2% 0;
+    border: none;
+    background-color: rgb(255, 255, 243);
+}
+#contact  #btlmcont{
+    font-size: 1.2em;
+    width: 100px;
+    height: 50px;
+
+    background-color: #ff0808;
+    border-radius: 10px;
+
 }
 footer{
+    display: flex;
+    justify-content: space-around;
     background-color: black;
     color: white;
-    display: flex;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
+footer p{
+    font-size: 10px;
+}
+#bethesda{
+    width: 30%;
+   
+}
+#news{
+    width: 40%;
+}
+
 /* .gras{
 
 }

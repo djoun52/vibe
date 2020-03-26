@@ -57,8 +57,10 @@ h1{
     text-align: center;
 }
 #firstSec{
+    background-color: rgb(219, 219, 219);
     display: flex;
     justify-content: space-between;
+    padding: 0em 1em;
 }
 .bouton{
         padding : 3px;
@@ -83,10 +85,58 @@ li{
     display: flex;
     align-items: center;
 }
-#firstSec #accordéon {
-    width: 50%;
+#accordéon {   /*  taille de l'accodéon */
+    width: 35%;
     padding-top: 1.6em;
-}
+  }
+
+.tab {      /* position curseur */
+    position: relative;
+    max-width: 600px;
+  }
+  
+  .tab input {  /*  enleve les reperes  */
+    display: none;
+  }
+  
+  .tab label {    
+    display: block;
+    background: #000000b0;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1em;
+    cursor: pointer;
+  }
+  
+  .tab label::after {
+    content: "\25b6";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    transition: all 0.4s;
+  }
+  
+  .tab input[type="radio"]:checked + label::after {
+    transform: rotate(0.25turn);
+  }
+  
+  .tab-content {
+    display: none;
+    overflow: hidden;
+    background: #ffffff;
+    transition: height 0.5s;
+    height: 0;
+  }
+  
+  .tab input:checked ~ .tab-content {
+    height: 135px;
+    display: block;
+  }
+  
+  .tab-content p {
+    margin: 20px;
+  }
 .margeliste{
     margin-left: 1em;
 }
@@ -94,25 +144,28 @@ li{
 
 .galerie{
     align-items: center;
+    padding-top: 2em;
 }
 .galerie div {
     max-height: 100%;
+    
+   
 }
 .galerie div img{
-  
+
     width: 230px;
 	height: 230px;
     margin: 10px ;
-    transition: height 1s;
+    transition: transform 0.5s ease;
 }
-/* .galerie div img:hover{
-    width: 260px;
-	height: 260px;
-} */
+.galerie div img:hover{
+     cursor: pointer;
+  transform: scale(1.15);
+}
 #navgal{
     display: flex;
     justify-content: space-evenly;
-    padding-top: 2em;
+    padding: 2em 0em;
 }
 .btlm{
     background-color: red;
@@ -133,7 +186,8 @@ li{
     justify-content: flex-end;
 }
 #testimonials{
-    padding: 3em;
+    padding: 1em;
+    background-color: rgb(153, 113, 113);
 }
 .testistart div, .testiend div{
    padding-top: 2em;
@@ -159,7 +213,7 @@ li{
     padding-bottom:  70px;
     padding-left:  150px;
     padding-right:  150px;
-    background-image: url(./images/doom_banniere.jpg); 
+    background-image: url(./images/doom_banniere.jpg) ; 
     opacity: 0.5;
     background-size: 1024px 300px;
     color: black;
@@ -167,6 +221,10 @@ li{
 #hell h2,#hell p{
     opacity: unset;
     font-weight: bolder;
+}
+#seccontact{
+    background-color: rgba(255, 154, 21, 0.363);
+    padding-top: 1em;
 }
 #contact{
     padding: 1.5em;

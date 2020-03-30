@@ -13,23 +13,31 @@
 <body>
     <div id="wrapper">
         <header>
-            <section>
-                <nav>
+            <section id="headr">
+                
                     <a href="">
                         <img src=" ./images/Doom_Eternal_Logo.png " id="logo" alt="logo">
                     </a>
-                    <div class="menue">
-                        <a href=""> HOME </a>
-                        <a href=""> ABOUT </a>
-                        <a href=""> GALLERY</a>
-                        <a href=""> TESTIMONIALS </a>
-                        <a href=""> CONTACT </a>
-                        <a href=""> PAGES </a>
-                    </div>
+                    <div class="nav-wrapper">
+                      <nav>
+                          <div class="navigation">
+                              <ul class="nav-items">
+                                  <li><a href="" target="_blank">HOME</a></li>
+                                  <li><a href="" target="_blank">ABOUT</a></li>
+                                  <li><a href="" target="_blank">GALLERY</a></li>
+                                  <li><a href="" target="_blank">TESTIMONIALS</a></li>
+                                  <li><a href="" target="_blank">CONTACT</a></li>
+                                  <li><a href="" target="_blank" title="+224 06 17 85">PAGES</a></li>
+          
+                              </ul>
+                              <div class="nav-toogler"></div>
+                          </div>
+                      </nav>
+                  </div>
 
 
 
-                </nav>
+                
             </section>
             <section class="prems">
                 <h1>
@@ -63,7 +71,7 @@
                     </p>
                 </article>
 
-                <article id="">
+                <article id="WordPress">
                     <h2>What you get?</h2>
                     <ul>
                         <li>
@@ -232,7 +240,14 @@
 
         </footer>
     </div>
+    <script>
+      let navWrapper = document.querySelector('.nav-wrapper'),
+          navToogler = document.querySelector('.nav-toogler')
 
+      navToogler.addEventListener('click', function (event) {
+          navWrapper.classList.toggle('active')
+      })
+  </script>
 </body>
 
 </html>
